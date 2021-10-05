@@ -22,10 +22,23 @@ public class Scene {
 
         Geezer theGeezer = Geezer.getTheGeezer();
 
-        SteganographyClassLoader loader = new SteganographyClassLoader(
-                new URL("https://cdn.njuics.cn/example.BubbleSorter.png"));
+        //SteganographyClassLoader loader = new SteganographyClassLoader(
+          //      new URL("https://cdn.njuics.cn/example.BubbleSorter.png"));
 
-        Class c = loader.loadClass("example.BubbleSorter");
+        //SteganographyClassLoader loader = new SteganographyClassLoader(
+          //      new URL("file:///C:/Users/xjh/javaHw/jw03-SilenceXjh/example.SelectSorter.png"));
+        //System.out.println("SelectSort");
+
+        //SteganographyClassLoader loader = new SteganographyClassLoader(
+          //      new URL("file:///C:/Users/xjh/javaHw/jw03-SilenceXjh/example.QuickSorter.png"));
+        //System.out.println("QuickSort");
+
+        SteganographyClassLoader loader = new SteganographyClassLoader(
+                new URL("file:///C:/Users/xjh/javaHw/jw03-SilenceXjh/othersImage/S191220097.QuickSorter.png"));
+
+        //Class c = loader.loadClass("example.BubbleSorter");
+        //Class c = loader.loadClass("example.SelectSorter");
+        Class c = loader.loadClass("example.QuickSorter");
 
         Sorter sorter = (Sorter) c.newInstance();
 
